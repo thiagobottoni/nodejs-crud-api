@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "c382bdbf-ba65-423d-bfc9-86ed0042e9be",
+		"name": "Lab-CRUD-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22282239"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":{\n        \"name\":\"abc\",\n        \"id\":1\n    }\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bottonithiag-5000.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/login",
+					"protocol": "https",
+					"host": [
+						"bottonithiag-5000",
+						"theiadocker-1-labs-prod-theiak8s-4-tor01",
+						"proxy",
+						"cognitiveclass",
+						"ai"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bottonithiag-5000.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/user?firstName=Bob&lastName=Smith&email=bobsmith@gamil.com&DOB=1/1/1978",
+					"protocol": "https",
+					"host": [
+						"bottonithiag-5000",
+						"theiadocker-1-labs-prod-theiak8s-4-tor01",
+						"proxy",
+						"cognitiveclass",
+						"ai"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Bob"
+						},
+						{
+							"key": "lastName",
+							"value": "Smith"
+						},
+						{
+							"key": "email",
+							"value": "bobsmith@gamil.com"
+						},
+						{
+							"key": "DOB",
+							"value": "1/1/1978"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bottonithiag-5000.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/user/bobsmith@gamil.com?DOB=1/1/1981",
+					"protocol": "https",
+					"host": [
+						"bottonithiag-5000",
+						"theiadocker-1-labs-prod-theiak8s-4-tor01",
+						"proxy",
+						"cognitiveclass",
+						"ai"
+					],
+					"path": [
+						"user",
+						"bobsmith@gamil.com"
+					],
+					"query": [
+						{
+							"key": "DOB",
+							"value": "1/1/1981"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bottonithiag-5000.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/user/bobsmith@gamil.com",
+					"protocol": "https",
+					"host": [
+						"bottonithiag-5000",
+						"theiadocker-1-labs-prod-theiak8s-4-tor01",
+						"proxy",
+						"cognitiveclass",
+						"ai"
+					],
+					"path": [
+						"user",
+						"bobsmith@gamil.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bottonithiag-5000.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/user",
+					"protocol": "https",
+					"host": [
+						"bottonithiag-5000",
+						"theiadocker-1-labs-prod-theiak8s-4-tor01",
+						"proxy",
+						"cognitiveclass",
+						"ai"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bottonithiag-5000.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/user/johnsmith@gamil.com",
+					"protocol": "https",
+					"host": [
+						"bottonithiag-5000",
+						"theiadocker-1-labs-prod-theiak8s-4-tor01",
+						"proxy",
+						"cognitiveclass",
+						"ai"
+					],
+					"path": [
+						"user",
+						"johnsmith@gamil.com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
